@@ -49,29 +49,74 @@ table {
 
 ///------------------------Reset CSS------------
 
-
+*{
+  box-sizing: border-box;
+}
 body{
   font-size: 14px;
   font-family: 'Lato', sans-serif;
   background: #e3e1e1;
 }
+#warning{
+  background: white;
+  padding: 10px 0;
+  text-align: center;
+  a{
+    text-decoration: none;
+    
+    &:hover{
+      color: orange;
+    }
+  }
+}
+#wrapper{
+  #boxContact{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px 0;
+    img{
+      height: 30px;
+    }
+    #iconContacts{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a{
+        text-decoration: none;
+        color: grey;
+        padding: 0.5em;
+        border: 2px solid grey;
+        border-radius: 50%;
+        font-size: 1em;
+        margin: 0 2px;
+        
+        &:hover{
+          color: orange;
+          border: 2px solid orange;
+        }
+      }
+    }
+  }
+}
 #message {
-	background: white;
+  background: white;
   padding: 20px;
   width: 90%;
   margin: 0 auto;
-  box-shadow: 2px 0px 3px #cccccc;
-
+  box-shadow: 0px 3px 5px #aaaaaa;
+  border-radius: 5px;
   #welcome{
     #hello{
       padding: 20px 0;
-      font-size: 1.4em;
+      font-size: 1.6em;
       font-weight: bold;
     }
     #welcomeMessage{
       padding-bottom: 20px;
-      font-size: 0.9em;
-      line-height: 1.5em;
+      font-size: 1em;
+      line-height: 1.6em;
       span{
         font-weight: bold;
       }
@@ -129,19 +174,24 @@ body{
       border: 2px solid #4e4e4e;
       border-radius: 10px;
       margin: 7px 0;
+      color: #848484;
+      &:hover{
+        background:#848484;
+        color: aliceblue;
+      }
     }
   }
   #shortNote{
-    padding: 20px 0;
+    padding-top: 1.6em;
     color: #7e7e7e;
     font-size: 1em;
-    line-height: 1.3em;
+    line-height: 1.5em;
     font-size: 0.9em;
   }
   #adviceBox{
     #adviceTitle{
       text-align: center;
-      padding: 20px 0;
+      padding-bottom: 1.4em;
       font-weight: bold;
       font-size: 1.2em;
     }
@@ -185,6 +235,12 @@ body{
     border-radius: 5px;
     font-size: 1.1em;
     font-weight: bold;
+    
+    &:hover{
+      color: white;
+      background:orange;
+      border: 2px solid white;
+    }
   }
   #problems{
     font-size: 0.7em;
@@ -202,11 +258,73 @@ body{
     }
   }
   .hrLine {
-	  margin: 15px 0;
+    margin: 25px 0;
     border: 1px solid #ededed;
+    width: 100%;
+    padding: 0;
+    z-index: 10;
 }
   
 }
+#confirmation{
+  font-size: 0.8em;
+  padding: 10px 0;
+  width: 90%;
+  margin: 0 auto;
+
+}
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  
+  #footerMenu, #copyWrite{
+    margin-top: 20px;
+    color: #bfb9b9;
+    a{
+      text-decoration: none;
+      color: grey;
+      font-size: 1.1em;
+      
+      &:hover{
+        color: black;
+      }
+      
+      &::after{
+        content: " ∙ ";
+        font-size: 1.1em;
+        padding: 0 5px;
+      }
+    }
+  }
+  #copyWrite{
+    margin-bottom: 40px;
+  }
+}
+
+
+@media all and (min-width:900px){
+  #wrapper{
+    #boxContact{
+      width: 60%;
+    }
+  }
+  #message{
+    width: 60%;
+  }
+  
+  #confirmation{
+    width: 60%;
+  }
+  
+}
+
+ 
+
+
+
 
 
 
