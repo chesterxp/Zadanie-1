@@ -154,7 +154,7 @@ body {
   padding: 30px 0;
 }
 #wrapper #boxContact img {
-  height: 30px;
+  height: 1.5em;
 }
 #wrapper #boxContact #iconContacts {
   display: flex;
@@ -329,7 +329,7 @@ body {
   z-index: 10;
 }
 #confirmation {
-  font-size: 0.8em;
+  font-size: 0.7em;
   padding: 10px 0;
   width: 90%;
   margin: 0 auto;
@@ -341,38 +341,61 @@ footer {
   align-items: center;
   margin-top: 30px;
 }
-footer #footerMenu,
-footer #copyWrite {
+footer #footerMenu {
   margin-top: 20px;
   color: #bfb9b9;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
 }
-footer #footerMenu a,
-footer #copyWrite a {
+footer #footerMenu a {
   text-decoration: none;
   color: grey;
-  font-size: 1.1em;
+  font-size: 0.9em;
 }
-footer #footerMenu a:hover,
-footer #copyWrite a:hover {
+footer #footerMenu a:hover {
   color: black;
 }
-footer #footerMenu a::after,
-footer #copyWrite a::after {
-  content: " ∙ ";
-  font-size: 1.1em;
-  padding: 0 5px;
-}
 footer #copyWrite {
-  margin-bottom: 40px;
+  margin: 20px 0 40px 0;
+  color: #bfb9b9;
 }
-@media all and (min-width: 900px) {
+@media all and (max-width: 599px) {
+  footer #footerMenu {
+    flex-direction: column;
+  }
+  footer #footerMenu a {
+    padding: 0.5em 1.3em;
+  }
+}
+@media all and (min-width: 600px) {
   #wrapper #boxContact {
     width: 60%;
+  }
+  #wrapper #boxContact img {
+    height: 2em;
   }
   #message {
     width: 60%;
   }
   #confirmation {
     width: 60%;
+  }
+  footer #footerMenu {
+    justify-content: space-around;
+  }
+  footer #footerMenu a {
+    text-decoration: none;
+    color: grey;
+    font-size: 1em;
+    padding: 10px 0;
+  }
+  footer #footerMenu a::after {
+    content: " ∙ ";
+    font-size: 1em;
+    padding: 0 10px;
+  }
+  footer #footerMenu a:last-child::after {
+    content: "";
   }
 }
