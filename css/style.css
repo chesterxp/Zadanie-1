@@ -311,6 +311,12 @@ body {
   line-height: 1.5em;
   color: #bcbcbc;
 }
+#message #problems a {
+  text-decoration: none;
+}
+#message #problems a:hover {
+  color: orange;
+}
 #message #signature {
   font-size: 1.3em;
   line-height: 1.7em;
@@ -320,6 +326,9 @@ body {
 }
 #message #signature a {
   text-decoration: none;
+}
+#message #signature a:hover {
+  color: orange;
 }
 #message .hrLine {
   margin: 25px 0;
